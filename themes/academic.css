@@ -1,0 +1,189 @@
+/* @theme academic */
+
+@import 'default';
+
+:root {
+  --color-background: #fefefe;
+  --color-foreground: #1a1a2e;
+  --color-primary: #16537e;
+  --color-accent: #e94560;
+  --color-highlight: #f8f0e3;
+  font-family: 'Noto Sans SC', 'Source Han Sans CN', 'Microsoft YaHei', sans-serif;
+}
+
+section {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  padding: 40px 60px;
+  display: block; /* 取消默认的 flex 居中 */
+}
+
+/* 标题页样式 */
+section.lead {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16537e 100%);
+  color: #fff;
+  text-align: center;
+  /* 标题页保持居中更美观，所以显式设置回 flex 居中 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section.lead h1 {
+  font-size: 1.8em;
+  border: none;
+  color: #fff;
+}
+
+section.lead h2 {
+  color: rgba(255,255,255,0.85);
+  font-weight: 400;
+}
+
+/* 论文标题页 */
+section.paper-title {
+  background: linear-gradient(160deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+section.paper-title h1 {
+  font-size: 1.35em;
+  line-height: 1.4;
+  border: none;
+  color: #fff;
+}
+
+section.paper-title p {
+  color: rgba(255,255,255,0.8);
+  font-size: 0.85em;
+}
+
+/* 正文段落 */
+p {
+  font-size: 0.85em;
+  line-height: 1.5;
+}
+
+/* 一般标题 */
+h1 {
+  color: var(--color-primary);
+  font-size: 1.35em;
+  border-bottom: 3px solid var(--color-accent);
+  padding-bottom: 8px;
+}
+
+h2 {
+  color: var(--color-primary);
+  font-size: 1.1em;
+}
+
+/* 列表样式 */
+ul, ol {
+  line-height: 1.5;
+  font-size: 0.85em;
+}
+
+li {
+  margin-bottom: 0.2em;
+}
+
+/* 图片居中 */
+img {
+  display: block;
+  margin: 0 auto;
+  max-height: 400px;
+}
+
+/* 强调样式 */
+strong {
+  color: var(--color-accent);
+}
+
+em {
+  color: var(--color-primary);
+}
+
+/* 引用块 - 用于论文信息 */
+blockquote {
+  background: var(--color-highlight);
+  border-left: 4px solid var(--color-accent);
+  padding: 12px 16px;
+  margin: 12px 0;
+  font-size: 0.8em;
+}
+
+/* 代码块 */
+code {
+  background: #f4f4f4;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.75em;
+}
+
+/* 表格样式 */
+table {
+  font-size: 0.75em;
+  margin: 0 auto;
+}
+
+th {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+/* 分栏布局 */
+section.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+/* 页眉 - 淡化，左对齐 */
+header {
+  font-size: 0.65em;
+  color: #aaa;
+  text-align: left;
+  left: 60px;
+  right: auto;
+}
+
+/* 页脚 */
+footer {
+  font-size: 0.7em;
+  color: #888;
+}
+
+/* Contribution/Method/Findings 标签 */
+section h1::before {
+  font-size: 0.5em;
+  vertical-align: middle;
+  margin-right: 10px;
+  padding: 3px 10px;
+  border-radius: 15px;
+  color: #fff;
+}
+
+section.contribution h1::before {
+  content: 'Contribution';
+  background: #27ae60;
+}
+
+section.method h1::before {
+  content: 'Method';
+  background: #3498db;
+}
+
+section.findings h1::before {
+  content: 'Findings';
+  background: #e74c3c;
+}
+
+section.overview h1::before {
+  content: 'Overview';
+  background: #9b59b6;
+}
+

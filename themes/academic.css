@@ -3,11 +3,11 @@
 @import 'default';
 
 :root {
-  --color-background: #fefefe;
-  --color-foreground: #1a1a2e;
-  --color-primary: #16537e;
-  --color-accent: #e94560;
-  --color-highlight: #f8f0e3;
+  --color-background: #ffffff;
+  --color-foreground: #2c3e50;
+  --color-primary: #2980b9;
+  --color-accent: #c0392b;
+  --color-highlight: #ecf0f1;
   font-family: 'Noto Sans SC', 'Source Han Sans CN', 'Microsoft YaHei', sans-serif;
 }
 
@@ -20,7 +20,7 @@ section {
 
 /* 标题页样式 */
 section.lead {
-  background: linear-gradient(135deg, #1a1a2e 0%, #16537e 100%);
+  background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
   color: #fff;
   text-align: center;
   /* 标题页保持居中更美观，所以显式设置回 flex 居中 */
@@ -43,7 +43,7 @@ section.lead h2 {
 
 /* 论文标题页 */
 section.paper-title {
-  background: linear-gradient(160deg, #0f2027, #203a43, #2c5364);
+  background: linear-gradient(135deg, #1c2833, #2e4053);
   color: #fff;
   display: flex;
   flex-direction: column;
